@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/pranay/ros_ws/vw_detect",
+  "command": "/usr/bin/g++    -isystem /opt/ros/kinetic/include/opencv-3.1.0-dev/opencv -isystem /opt/ros/kinetic/include/opencv-3.1.0-dev  -g3 -gdwarf-2   -std=c++14 -o CMakeFiles/main.dir/main.cpp.o -c /home/pranay/ros_ws/vw_detect/main.cpp",
+  "file": "/home/pranay/ros_ws/vw_detect/main.cpp"
+},
+{
+  "directory": "/home/pranay/ros_ws/vw_detect",
+  "command": "/usr/bin/g++    -isystem /opt/ros/kinetic/include/opencv-3.1.0-dev/opencv -isystem /opt/ros/kinetic/include/opencv-3.1.0-dev  -g3 -gdwarf-2   -std=c++14 -o CMakeFiles/main.dir/vw_detect.cpp.o -c /home/pranay/ros_ws/vw_detect/vw_detect.cpp",
+  "file": "/home/pranay/ros_ws/vw_detect/vw_detect.cpp"
+}
+]
