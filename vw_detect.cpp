@@ -16,6 +16,7 @@
 #include <iostream>
 #include <stdint.h>
 #include "ctpl_stl.h"
+#include <unistd.h>
 
 using namespace std;
 using namespace cv;
@@ -30,7 +31,7 @@ void vw_detect::vw_detect_init(char *path_to_hash)
     }
      */
     char buff[256];
-    int file_handle = open(path_to_hash);
+    int file_handle = open(path_to_hash, O_RDONLY);
     if (file_handle == -1)
     {
         cerr << "Cannot open file";
@@ -40,7 +41,7 @@ void vw_detect::vw_detect_init(char *path_to_hash)
     {
         for (int s = 0; s < 256; s++)
         {
-            if (read(file_handle, buff, 256) != 256)
+            if (read(file_handle, buff, sizeof (buff)) != 256)
             {
                 cerr << "error reading file at " << h << " " << s << "\n";
                 return;
@@ -55,18 +56,24 @@ void vw_detect::vw_detect_init(char *path_to_hash)
 
 }
 
-void vw_detect::getPredictions(Mat original, Mat prediction, bool &done)
+void vw_detect::getPredictions(Mat original, Mat prediction)
 {
     Mat hsv_image;
     cvtColor(original, hsv_image, CV_BGR2HSV);
     //    prediction = Mat(original.rows, original.cols, CV_8UC3, Scalar(0, 0, 0));
-    for (int i = 0; i <= 255; i += 256 / n_threads )
+    for (int i = 0; i <= 255; i += original.rows / n_threads)
     {
-        pool.push(predict_block, hsv_image, prediction, i, i + 256/n_threads - 1 );
+        pool.push(this->*predict_block, hsv_image, prediction, i, i + original.rows / n_threads - 1);
     }
+    
 }
 
-void vw_detect::predict_block(Mat hsv_image, Mat prediction, int start, int end)
+bool vw_detect::is_ideal()
+{
+    return (pool.n_idle() == pool.size());
+}
+
+void vw_detect::predict_block(int id, Mat hsv_image, Mat prediction, int start, int end)
 {
     for (int i = start; i <= end; i++)
     {
@@ -114,7 +121,7 @@ void vw_detect::clean_up()
     pool.stop(0);
 }
 
-vw_detect::vw_detect(char *path_to_hash,int n) : n_threads(n)
+vw_detect::vw_detect(char *path_to_hash, int n) : n_threads(n)
 {
     vw_detect_init(path_to_hash);
 }

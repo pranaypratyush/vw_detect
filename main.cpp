@@ -35,8 +35,9 @@ int main(int argc, char** argv)
     Mat prediction(image.rows, image.cols, CV_8UC3, Scalar(0, 0, 0));
     //***********DANGEROUS CODE AHEAD (but fast too(hopefully))******************
 
-    vw_detect new_vw(argv[2]);
-    new_vw.getPredictions(denoised,prediction);
+    vw_detect new_vw(argv[2],4);
+    bool done;
+    new_vw.getPredictions(denoised,prediction,done);
     
 
     imshow("Original Image", image);

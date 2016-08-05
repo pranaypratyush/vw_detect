@@ -20,6 +20,7 @@
 #include <string>
 #include <iostream>
 #include <stdint.h>
+#include "ctpl_stl.h"
 //#include <sstream>
 //#include <sys/types.h>
 //#include <sys/stat.h>
@@ -33,15 +34,16 @@ class vw_detect
 public:
     int n_threads;
     uint_least8_t hash_table[256][256][256];
-    void vw_detect_init(char*, int);
+    void vw_detect_init(char*);
     void getPredictions(cv::Mat, cv::Mat);
+    bool is_ideal();
     void clean_up();
     vw_detect(char*, int);
     ~vw_detect();
 
 private:
     ctpl::thread_pool pool;
-    void predict_block(cv::Mat, cv::Mat, int, int);
+    void predict_block(int, cv::Mat, cv::Mat, int, int);
 
     /*
     static void write_to_input(cv::Mat, int in_handle);
