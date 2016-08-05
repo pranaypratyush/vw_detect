@@ -43,7 +43,7 @@ public:
 
 private:
     ctpl::thread_pool pool;
-    void predict_block(int, cv::Mat, cv::Mat, int, int);
+    void predict_block(cv::Mat, cv::Mat, int, int);
 
     /*
     static void write_to_input(cv::Mat, int in_handle);

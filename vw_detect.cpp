@@ -63,9 +63,13 @@ void vw_detect::getPredictions(Mat original, Mat prediction)
     //    prediction = Mat(original.rows, original.cols, CV_8UC3, Scalar(0, 0, 0));
     for (int i = 0; i <= 255; i += original.rows / n_threads)
     {
-        pool.push(this->*predict_block, hsv_image, prediction, i, i + original.rows / n_threads - 1);
+        //pool.push(vw_detect::predict_block, hsv_image, prediction, i, i + original.rows / n_threads - 1,this->hash_table);
+        pool.push([&, this](int id)
+        {
+            this->predict_block(hsv_image, prediction, i, i + original.rows / n_threads - 1);
+        });
     }
-    
+
 }
 
 bool vw_detect::is_ideal()
@@ -73,7 +77,7 @@ bool vw_detect::is_ideal()
     return (pool.n_idle() == pool.size());
 }
 
-void vw_detect::predict_block(int id, Mat hsv_image, Mat prediction, int start, int end)
+void vw_detect::predict_block(Mat hsv_image, Mat prediction, int start, int end)
 {
     for (int i = start; i <= end; i++)
     {

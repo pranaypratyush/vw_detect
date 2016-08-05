@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/pranay/ros_ws/vw_detect/ctpl_stl.h
+/home/pranay/ros_ws/Desktop/vw_detect/ctpl_stl.h
 functional
 -
 thread
@@ -26,13 +26,13 @@ mutex
 queue
 -
 
-/home/pranay/ros_ws/vw_detect/main.cpp
+/home/pranay/ros_ws/Desktop/vw_detect/main.cpp
 vw_detect.h
-/home/pranay/ros_ws/vw_detect/vw_detect.h
+/home/pranay/ros_ws/Desktop/vw_detect/vw_detect.h
 
-/home/pranay/ros_ws/vw_detect/vw_detect.cpp
+/home/pranay/ros_ws/Desktop/vw_detect/vw_detect.cpp
 vw_detect.h
-/home/pranay/ros_ws/vw_detect/vw_detect.h
+/home/pranay/ros_ws/Desktop/vw_detect/vw_detect.h
 fstream
 -
 fcntl.h
@@ -42,11 +42,11 @@ iostream
 stdint.h
 -
 ctpl_stl.h
-/home/pranay/ros_ws/vw_detect/ctpl_stl.h
+/home/pranay/ros_ws/Desktop/vw_detect/ctpl_stl.h
 unistd.h
 -
 
-/home/pranay/ros_ws/vw_detect/vw_detect.h
+/home/pranay/ros_ws/Desktop/vw_detect/vw_detect.h
 cstdlib
 -
 opencv2/opencv.hpp
@@ -60,7 +60,7 @@ iostream
 stdint.h
 -
 ctpl_stl.h
-/home/pranay/ros_ws/vw_detect/ctpl_stl.h
+/home/pranay/ros_ws/Desktop/vw_detect/ctpl_stl.h
 
 /opt/ros/kinetic/include/opencv-3.1.0-dev/opencv/cxcore.h
 opencv2/core/core_c.h

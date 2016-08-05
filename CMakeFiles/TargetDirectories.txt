@@ -1,3 +1,3 @@
-/home/pranay/ros_ws/vw_detect/CMakeFiles/rebuild_cache.dir
-/home/pranay/ros_ws/vw_detect/CMakeFiles/edit_cache.dir
-/home/pranay/ros_ws/vw_detect/CMakeFiles/main.dir
+/home/pranay/ros_ws/Desktop/vw_detect/CMakeFiles/rebuild_cache.dir
+/home/pranay/ros_ws/Desktop/vw_detect/CMakeFiles/edit_cache.dir
+/home/pranay/ros_ws/Desktop/vw_detect/CMakeFiles/main.dir

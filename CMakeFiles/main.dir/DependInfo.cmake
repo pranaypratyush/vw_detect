@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/pranay/ros_ws/vw_detect/main.cpp" "/home/pranay/ros_ws/vw_detect/CMakeFiles/main.dir/main.cpp.o"
-  "/home/pranay/ros_ws/vw_detect/vw_detect.cpp" "/home/pranay/ros_ws/vw_detect/CMakeFiles/main.dir/vw_detect.cpp.o"
+  "/home/pranay/ros_ws/Desktop/vw_detect/main.cpp" "/home/pranay/ros_ws/Desktop/vw_detect/CMakeFiles/main.dir/main.cpp.o"
+  "/home/pranay/ros_ws/Desktop/vw_detect/vw_detect.cpp" "/home/pranay/ros_ws/Desktop/vw_detect/CMakeFiles/main.dir/vw_detect.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
