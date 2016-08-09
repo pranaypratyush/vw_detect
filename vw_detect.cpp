@@ -125,7 +125,7 @@ void vw_detect::clean_up()
     pool.stop(0);
 }
 
-vw_detect::vw_detect(char *path_to_hash, int n) : n_threads(n)
+vw_detect::vw_detect(char *path_to_hash, int n = 4) : n_threads(n)
 {
     vw_detect_init(path_to_hash);
 }
@@ -137,7 +137,7 @@ vw_detect::~vw_detect()
 
 void vw_detect::wait_for_completion()
 {
-    if(!is_idle())
+    if (!is_idle())
         usleep(5000);
 }
 
