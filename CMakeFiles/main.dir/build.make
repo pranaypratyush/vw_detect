@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/pranay/ros_ws/Desktop/vw_detect
+CMAKE_SOURCE_DIR = /home/pranay/Desktop/vw_detect
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/pranay/ros_ws/Desktop/vw_detect
+CMAKE_BINARY_DIR = /home/pranay/Desktop/vw_detect
 
 # Include any dependencies generated for this target.
 include CMakeFiles/main.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/main.dir/flags.make
 
 CMakeFiles/main.dir/main.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/main.cpp.o: main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pranay/ros_ws/Desktop/vw_detect/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/main.dir/main.cpp.o"
-	/usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/main.cpp.o -c /home/pranay/ros_ws/Desktop/vw_detect/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pranay/Desktop/vw_detect/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/main.dir/main.cpp.o"
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/main.cpp.o -c /home/pranay/Desktop/vw_detect/main.cpp
 
 CMakeFiles/main.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/main.cpp.i"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pranay/ros_ws/Desktop/vw_detect/main.cpp > CMakeFiles/main.dir/main.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pranay/Desktop/vw_detect/main.cpp > CMakeFiles/main.dir/main.cpp.i
 
 CMakeFiles/main.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/main.cpp.s"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pranay/ros_ws/Desktop/vw_detect/main.cpp -o CMakeFiles/main.dir/main.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pranay/Desktop/vw_detect/main.cpp -o CMakeFiles/main.dir/main.cpp.s
 
 CMakeFiles/main.dir/main.cpp.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/main.dir/main.cpp.o.provides.build: CMakeFiles/main.dir/main.cpp.o
 
 CMakeFiles/main.dir/vw_detect.cpp.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/vw_detect.cpp.o: vw_detect.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pranay/ros_ws/Desktop/vw_detect/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/vw_detect.cpp.o"
-	/usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/vw_detect.cpp.o -c /home/pranay/ros_ws/Desktop/vw_detect/vw_detect.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pranay/Desktop/vw_detect/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/main.dir/vw_detect.cpp.o"
+	/usr/bin/g++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/vw_detect.cpp.o -c /home/pranay/Desktop/vw_detect/vw_detect.cpp
 
 CMakeFiles/main.dir/vw_detect.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/vw_detect.cpp.i"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pranay/ros_ws/Desktop/vw_detect/vw_detect.cpp > CMakeFiles/main.dir/vw_detect.cpp.i
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pranay/Desktop/vw_detect/vw_detect.cpp > CMakeFiles/main.dir/vw_detect.cpp.i
 
 CMakeFiles/main.dir/vw_detect.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/vw_detect.cpp.s"
-	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pranay/ros_ws/Desktop/vw_detect/vw_detect.cpp -o CMakeFiles/main.dir/vw_detect.cpp.s
+	/usr/bin/g++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pranay/Desktop/vw_detect/vw_detect.cpp -o CMakeFiles/main.dir/vw_detect.cpp.s
 
 CMakeFiles/main.dir/vw_detect.cpp.o.requires:
 
@@ -160,7 +160,7 @@ main: /opt/ros/kinetic/lib/libopencv_imgproc3.so.3.1.0
 main: /opt/ros/kinetic/lib/libopencv_flann3.so.3.1.0
 main: /opt/ros/kinetic/lib/libopencv_core3.so.3.1.0
 main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pranay/ros_ws/Desktop/vw_detect/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pranay/Desktop/vw_detect/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -178,6 +178,6 @@ CMakeFiles/main.dir/clean:
 .PHONY : CMakeFiles/main.dir/clean
 
 CMakeFiles/main.dir/depend:
-	cd /home/pranay/ros_ws/Desktop/vw_detect && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pranay/ros_ws/Desktop/vw_detect /home/pranay/ros_ws/Desktop/vw_detect /home/pranay/ros_ws/Desktop/vw_detect /home/pranay/ros_ws/Desktop/vw_detect /home/pranay/ros_ws/Desktop/vw_detect/CMakeFiles/main.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/pranay/Desktop/vw_detect && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/pranay/Desktop/vw_detect /home/pranay/Desktop/vw_detect /home/pranay/Desktop/vw_detect /home/pranay/Desktop/vw_detect /home/pranay/Desktop/vw_detect/CMakeFiles/main.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/main.dir/depend
 

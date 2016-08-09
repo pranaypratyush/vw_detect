@@ -273,3 +273,58 @@ Makefile:126: recipe for target 'cmTC_782d1/fast' failed
 make: *** [cmTC_782d1/fast] Error 2
 
 
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/pranay/Desktop/vw_detect/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9f515/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9f515.dir/build.make CMakeFiles/cmTC_9f515.dir/build
+make[1]: Entering directory '/home/pranay/Desktop/vw_detect/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9f515.dir/CheckSymbolExists.c.o
+/usr/bin/gcc     -o CMakeFiles/cmTC_9f515.dir/CheckSymbolExists.c.o   -c /home/pranay/Desktop/vw_detect/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_9f515
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9f515.dir/link.txt --verbose=1
+/usr/bin/gcc       CMakeFiles/cmTC_9f515.dir/CheckSymbolExists.c.o  -o cmTC_9f515 -rdynamic 
+CMakeFiles/cmTC_9f515.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_9f515.dir/build.make:97: recipe for target 'cmTC_9f515' failed
+make[1]: *** [cmTC_9f515] Error 1
+make[1]: Leaving directory '/home/pranay/Desktop/vw_detect/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_9f515/fast' failed
+make: *** [cmTC_9f515/fast] Error 2
+
+File /home/pranay/Desktop/vw_detect/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/pranay/Desktop/vw_detect/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6e838/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6e838.dir/build.make CMakeFiles/cmTC_6e838.dir/build
+make[1]: Entering directory '/home/pranay/Desktop/vw_detect/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6e838.dir/CheckFunctionExists.c.o
+/usr/bin/gcc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_6e838.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
+Linking C executable cmTC_6e838
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6e838.dir/link.txt --verbose=1
+/usr/bin/gcc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_6e838.dir/CheckFunctionExists.c.o  -o cmTC_6e838 -rdynamic -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_6e838.dir/build.make:97: recipe for target 'cmTC_6e838' failed
+make[1]: *** [cmTC_6e838] Error 1
+make[1]: Leaving directory '/home/pranay/Desktop/vw_detect/CMakeFiles/CMakeTmp'
+Makefile:126: recipe for target 'cmTC_6e838/fast' failed
+make: *** [cmTC_6e838/fast] Error 2
+
+

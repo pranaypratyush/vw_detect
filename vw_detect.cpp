@@ -72,7 +72,7 @@ void vw_detect::getPredictions(Mat original, Mat prediction)
 
 }
 
-bool vw_detect::is_ideal()
+bool vw_detect::is_idle()
 {
     return (pool.n_idle() == pool.size());
 }
@@ -135,4 +135,9 @@ vw_detect::~vw_detect()
     vw_detect::clean_up();
 }
 
+void vw_detect::wait_for_completion()
+{
+    if(!is_idle())
+        usleep(5000);
+}
 

@@ -36,11 +36,11 @@ public:
     uint_least8_t hash_table[256][256][256];
     void vw_detect_init(char*);
     void getPredictions(cv::Mat, cv::Mat);
-    bool is_ideal();
+    bool is_idle();
     void clean_up();
     vw_detect(char*, int);
     ~vw_detect();
-
+    void wait_for_completion();
 private:
     ctpl::thread_pool pool;
     void predict_block(cv::Mat, cv::Mat, int, int);
